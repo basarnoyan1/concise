@@ -19,7 +19,7 @@ from . import optimizers
 from .legacy.get_data import prepare_data
 
 # Add all the custom objects to keras
-from keras.utils.generic_utils import get_custom_objects
+from keras.utils import get_custom_objects
 custom_objects_modules = [initializers, metrics, regularizers, layers,
                           losses, optimizers]
 for mod in custom_objects_modules:

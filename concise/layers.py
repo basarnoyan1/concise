@@ -1,12 +1,12 @@
 import numpy as np
 from keras import backend as K
-from keras.engine.topology import Layer
-from keras.layers.pooling import _GlobalPooling1D
+from tensorflow.python.keras.layers.pooling import GlobalPooling1D as _GlobalPooling1D
 from keras.layers import Conv1D, Input, LocallyConnected1D
+from tensorflow.keras.layers import Layer, InputSpec
 from keras.layers.core import Dropout
 from concise.utils.plot import seqlogo, seqlogo_fig
 import matplotlib.pyplot as plt
-from keras.engine import InputSpec
+
 
 from concise.utils.pwm import DEFAULT_BASE_BACKGROUND, pssm_array2pwm_array, _pwm2pwm_info
 from keras import activations
