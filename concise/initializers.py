@@ -5,7 +5,7 @@ from keras.initializers import Initializer, serialize, deserialize
 from keras import backend as K
 import concise
 from concise.utils.pwm import PWM, pwm_list2pwm_array, pwm_array2pssm_array, DEFAULT_BASE_BACKGROUND
-from keras.utils.generic_utils import get_custom_objects
+from keras.utils import get_custom_objects
 
 import numpy as np
 from scipy.stats import truncnorm
