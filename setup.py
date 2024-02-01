@@ -20,7 +20,7 @@ requirements = [
     "matplotlib",
     # "tensorflow", # - not per-se required
     # "glmnet",
-    "keras>=2.0.4,<=2.2.4",
+    #"keras>=2.0.4",
     'descartes',
     'shapely',
     'gtfparse>=1.0.7'
@@ -52,9 +52,9 @@ setup(
     zip_safe=False,
     keywords=["computational biology", "bioinformatics", "genomics",
               "deep learning", "tensorflow", ],
-    extras_require={
-        'tensorflow': ['tensorflow>=1.0'],
-        'tensorflow with gpu': ['tensorflow-gpu>=1.0']},
+#    extras_require={
+ #       'tensorflow': ['tensorflow>=1.0'],
+  #      'tensorflow with gpu': ['tensorflow-gpu>=1.0']},
     classifiers=[
         # classifiers
         # default

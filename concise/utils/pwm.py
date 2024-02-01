@@ -186,7 +186,7 @@ def _check_background_probs(background_probs):
 
 def pwm_list2pwm_array(pwm_list, shape=(None, 4, None), dtype=None, background_probs=DEFAULT_BASE_BACKGROUND):
     # print("shape: ", shape)
-    if shape[1] is not 4:
+    if shape[1] != 4:
         raise ValueError("shape[1] has to be 4 and not {0}".format(shape[1]))
 
     # copy pwm_list
@@ -224,7 +224,7 @@ def pwm_list2pwm_array(pwm_list, shape=(None, 4, None), dtype=None, background_p
 
     # stack the matrices along the last axis
     pwm_array = np.stack([pwm.pwm for pwm in pwm_list], axis=-1)
-    pwm_array = pwm_array.astype(dtype)
+    pwm_array = pwm_array.astype('float32')
 
     # change the axis order
     return pwm_array
